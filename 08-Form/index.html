@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styling Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="namaLengkap">Evandri Ridho Hasmono</h1>
+      <button onclick="setNewData()">Ganti Data</button>
+    </header>
+    <main>
+      <form onsubmit="register()" method="post">
+        <label>Usename</label>
+        <input type="text" id="username" />
+
+        <label>Password</label>
+        <input type="password" id="password" />
+
+        <button type="submit">Register</button>
+      </form>
+    </main>
+    <script>
+      function register(event) {
+        event.preventDefault();
+        const inputUsername = username.value;
+        const inputPassword = password.value;
+
+        if (inputUsername.length <= 4) {
+          return alert("Username Harus lebih dari 4 karakter");
+        }
+        if (inputPassword.length <= 8) {
+          return alert("Password Harus lebih dari 8 karakter");
+        }
+
+        alert("Anda Berhasil Register!");
+      }
+    </script>
+  </body>
+</html>

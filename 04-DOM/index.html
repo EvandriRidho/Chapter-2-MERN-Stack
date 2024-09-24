@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styling Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="namaLengkap">Evandri Ridho Hasmono</h1>
+      <button onclick="setNewData()">Ganti Data</button>
+    </header>
+    <main>
+      <article>
+        <h3 id="judulAction">Rekomendasi Film Action</h3>
+        <p>Hello ini film action terbaik</p>
+      </article>
+      <article>
+        <h3 id="judulDrama">Rekomendasi Film Drama</h3>
+        <p>Hello ini film drama terbaik</p>
+      </article>
+      <article>
+        <h3 id="judulKomedi">Rekomendasi Film Komedi</h3>
+        <p>Hello ini film komedi terbaik</p>
+      </article>
+    </main>
+    <footer>
+      <p>Dibuat Oleh Evandri Ridho Hasmono</p>
+    </footer>
+    <script>
+      const article1 = document.getElementsByTagName("article")[0];
+      const article2 = document.getElementsByTagName("article")[1];
+      const article3 = document.getElementsByTagName("article")[2];
+
+      article2.addEventListener("click", function () {
+        article2.style.backgroundColor = "red";
+        article2.style.color = "white";
+        article2.style.scale = "1.2";
+        article2.style.transition = ".5s";
+
+        article1.style.scale = ".8";
+        article1.style.transition = "1s";
+
+        article3.style.scale = ".8";
+        article3.style.transition = "1s";
+      });
+
+      function setNewData() {
+        const inputNamaLengkap = prompt("Masukkan Nama Lengkap Anda?");
+        namaLengkap.textContent = inputNamaLengkap;
+
+        const inputJudulAction = prompt(
+          "Masukkan Judul Film Action Favorit Anda?"
+        );
+        judulAction.textContent = inputJudulAction;
+
+        const inputJudulDrama = prompt(
+          "Masukkan Judul Film Drama Favorit Anda?"
+        );
+        judulDrama.textContent = inputJudulDrama;
+
+        const inputJudulKomedi = prompt(
+          "Masukkan Judul Film Komedi Favorit Anda?"
+        );
+        judulKomedi.textContent = inputJudulKomedi;
+      }
+    </script>
+  </body>
+</html>
